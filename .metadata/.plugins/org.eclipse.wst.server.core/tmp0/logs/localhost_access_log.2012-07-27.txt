@@ -146,3 +146,13 @@
 0:0:0:0:0:0:0:1 - - [27/Jul/2012:12:34:15 +0900] "GET /gallery/undefined HTTP/1.1" 404 1006
 0:0:0:0:0:0:0:1 - - [27/Jul/2012:12:34:15 +0900] "GET /gallery/undefined HTTP/1.1" 404 1006
 0:0:0:0:0:0:0:1 - - [27/Jul/2012:12:34:15 +0900] "GET /gallery/undefined HTTP/1.1" 404 1006
+0:0:0:0:0:0:0:1 - - [27/Jul/2012:14:05:53 +0900] "GET /gallery/ajax2.html HTTP/1.1" 200 1321
+0:0:0:0:0:0:0:1 - - [27/Jul/2012:14:05:53 +0900] "GET /gallery/fotorama.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [27/Jul/2012:14:05:53 +0900] "GET /gallery/fotorama.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [27/Jul/2012:14:05:53 +0900] "GET /favicon.ico HTTP/1.1" 404 988
+0:0:0:0:0:0:0:1 - - [27/Jul/2012:14:05:59 +0900] "GET /gallery/undefined HTTP/1.1" 404 1006
+0:0:0:0:0:0:0:1 - - [27/Jul/2012:14:06:00 +0900] "GET /gallery/undefined HTTP/1.1" 404 1006
+0:0:0:0:0:0:0:1 - - [27/Jul/2012:14:06:00 +0900] "GET /gallery/undefined HTTP/1.1" 404 1006
+0:0:0:0:0:0:0:1 - - [27/Jul/2012:14:06:00 +0900] "GET /gallery/undefined HTTP/1.1" 404 1006
+0:0:0:0:0:0:0:1 - - [27/Jul/2012:14:06:00 +0900] "GET /gallery/undefined HTTP/1.1" 404 1006
+0:0:0:0:0:0:0:1 - - [27/Jul/2012:14:06:00 +0900] "GET /gallery/undefined HTTP/1.1" 404 1006

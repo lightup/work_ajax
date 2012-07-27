@@ -701,3 +701,23 @@ Binding(ALT+SHIFT+ARROW_LEFT,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY org.eclipse.jst.j2ee 4 0 2012-07-27 14:03:03.777
+!MESSAGE No IModelProvider exists for project P/gallery of version: null
+!STACK 0
+java.lang.NullPointerException: No IModelProvider exists for project P/gallery of version: null
+	at org.eclipse.jst.j2ee.model.ModelProviderManager.getModelProvider(ModelProviderManager.java:101)
+	at org.eclipse.jst.j2ee.model.ModelProviderManager.getModelProvider(ModelProviderManager.java:281)
+	at org.eclipse.jst.jee.ui.internal.navigator.JEE5ContentProvider.getCachedModelProvider(JEE5ContentProvider.java:76)
+	at org.eclipse.jst.jee.ui.internal.navigator.Web25ContentProvider.getNewContentProviderInstance(Web25ContentProvider.java:69)
+	at org.eclipse.jst.jee.ui.internal.navigator.LoadingJeeDDJob.run(LoadingJeeDDJob.java:50)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2012-07-27 14:03:03.778
+!MESSAGE An internal error occurred during: "Loading descriptor for gallery.".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jst.jee.ui.internal.navigator.JEE5ContentProvider.getCachedModelProvider(JEE5ContentProvider.java:77)
+	at org.eclipse.jst.jee.ui.internal.navigator.Web25ContentProvider.getNewContentProviderInstance(Web25ContentProvider.java:69)
+	at org.eclipse.jst.jee.ui.internal.navigator.LoadingJeeDDJob.run(LoadingJeeDDJob.java:50)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
