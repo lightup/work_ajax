@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX</title>
+	<script type="text/javascript" src="http://code.jqueyr.com/jquery-leatest.js"></script>
+	<script type="text/javascript">
+	var jq;
+	var getData=function(){
+		jq=$.ajax({
+			url:"image.js",
+			data:{
+				apikey:"key",
+				q:"snsd"
+			},
+			success:function(r){
+				console.log(t);
+			}
+			
+		})
+		
+	}
+	</script>
+	</head>
+<body>
+	<div id ="result">.</div>
+</body>
+</html>

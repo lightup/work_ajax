@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+        <meta charset="UTF-8">
+        <title>AJAX</title>
+        <link rel="stylesheet" type="text/css" href="fotorama.css" media="all" /> 
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="fotorama.js"></script>
+         <script type="text/javascript">
+        var jq;
+        var getData = function() {
+                jq = $.ajax({
+                        url : "http://apis.daum.net/search/image",
+                        dataType:"jsonp",
+                        data : {
+                        	  apikey : "3803541fce89370275fcefe628ed9f9acafe223e", 
+              		        q : "lunch",             // search keyword
+              		        result : "20",                 // result set length
+              		        pageno : "1",   // pageNo
+              		        output : "json"                // JSONP type format json
+                        },
+                        success : function(r) {
+                                console.log(r);
+                                rss=r;
+                                draw();
+                        }
+                })
+        }
+        
+        
+        var rss;
+        var parsing = function() {
+                rss = JSON.parse(jq.responseText);
+             
+        }
+        
+        var draw = function() {
+                var string = "";
+                var items = rss.channel.item;
+                for (var i = 0; i < items.length; i++) {
+                        string += "<img src='"+ items[i].image + "'>";
+                        
+                }
+                $("#result").html(string);
+                $("#result").fotorama();
+       }
+        
+   		$(function(){
+   			$("#go").click(getData);
+   		})
+   		
+        </script>
+</head>
+<body>
+<input type ="text" id="q" />
+<button id="go">go</button>
+        <div id="result">.</div>
+</body>
+</html>

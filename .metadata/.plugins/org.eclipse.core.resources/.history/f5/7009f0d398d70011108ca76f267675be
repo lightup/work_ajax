@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+        <meta charset="UTF-8">
+        <title>AJAX</title>
+        <link rel="stylesheet" type="text/css" href="fotorama.css"  /> 
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+	rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+      	<script type="text/javascript" ></script>
+        <script type="text/javascript">
+        var jq;
+        var getData = function() {
+                jq = $.ajax({
+                        url : "image.js",
+                        data : {
+                                apikey : "key",
+                                q : "snsd"
+                        },
+                        success : function(r) {
+                                console.log(r);
+                        }
+                })
+        }
+        
+        var rss;
+        var parsing = function() {
+                rss = JSON.parse(jq.responseText);
+        }
+        
+        var draw = function() {
+                var string = "";
+                var items = rss.channel.item;
+                for (var i = 0; i < items.length; i++) {
+                        string += "<img src='"+ items[i].image + "'>";
+                }
+        }
+        $("#result").html(string);
+        </script>
+</head>
+<body>
+        <div id="result">.</div>
+</body>
+</html>

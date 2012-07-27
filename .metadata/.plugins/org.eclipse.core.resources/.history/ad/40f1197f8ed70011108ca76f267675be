@@ -1,0 +1,11 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js" ></script>
+	<title></title>
+</head>
+<body>
+  <div id ="result">. </div>
+</body>
+</html>	

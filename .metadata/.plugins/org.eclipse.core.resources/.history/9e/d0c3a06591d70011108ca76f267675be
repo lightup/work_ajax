@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+	var getData=function()
+	{	
+		var jq = $.ajax({
+	}
+                        url : "image.js",
+                        data : {
+                                apikey : "opop",
+                                q : "snsd"
+                        },
+                        success : function(r) {
+                                console.log(r)
+                        }
+	}
+	var callback = function(){
+		console.log("아싸");
+	}
+	</script>
+<title>ajax</title>
+</head>
+<body>
+	<div id="result">.</div>
+</body>
+</html>

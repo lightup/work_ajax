@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-latest.js"></script>
+	script[src=fotorama.js]
+<script type="text/javascript">
+	var jq;
+	
+	var getData = function() {
+	        jq = $.ajax({
+	                url : "image.js",
+	                data : {
+	                        apikey : "opop",
+	                        q : "snsd"
+	                },
+	                success : function(r) {
+	                        console.log(r)
+	                }
+	        })
+	}
+	var rss;
+	var parsing = function() {
+	        rss = JSON.parse(jq.responseText);
+	}
+
+	var draw = function() {
+	        var string = "<ul>";
+	        string += "<li>image</li>";
+	        var items = rss.channel.item;
+	        for(var i=0; i<rss.channel.item.length;i++){
+	        	string += "<li>"+ items[i].image + "</li>"
+	        }
+	        
+	        string += "</ul>";
+	        
+	        $("#result").html(string);
+	}
+	</script>
+<title>ajax</title>
+</head>
+<body>
+	<div id="result">.</div>
+</body>
+</html>

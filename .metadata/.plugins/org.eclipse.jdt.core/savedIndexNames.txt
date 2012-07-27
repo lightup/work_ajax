@@ -1,0 +1,2 @@
+INDEX VERSION 1.126+C:\hybrid\work_ajax\.metadata\.plugins\org.eclipse.jdt.core
+3186400932.index
